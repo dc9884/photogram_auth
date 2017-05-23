@@ -43,6 +43,8 @@ photo_infos = [
 
 users = User.all
 
+#Photo.delete_all
+
 users.each do |user|
   photo_infos.each do |photo_info|
     photo = Photo.new(photo_info)
@@ -55,6 +57,8 @@ puts "There are now #{Photo.count} photos in the database."
 
 photos = Photo.all
 
+#Comment.delete_all
+
 photos.each do |photo|
   rand(6).times do
     comment = Comment.new
@@ -66,6 +70,8 @@ photos.each do |photo|
 end
 
 puts "There are now #{Comment.count} comments in the database."
+
+#Like.delete_all
 
 photos.each do |photo|
   users.sample(rand(users.count)).each do |user|
