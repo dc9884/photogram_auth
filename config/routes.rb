@@ -27,6 +27,7 @@ root "photos#index"
   # READ
   get "/likes", :controller => "likes", :action => "index"
   get "/likes/:id", :controller => "likes", :action => "show"
+  get "/my_likes", :controller => "likes", :action => "show_me"
 
   # UPDATE
   get "/likes/:id/edit", :controller => "likes", :action => "edit"
@@ -63,7 +64,7 @@ root "photos#index"
 
   # READ
   get "/users", :controller => "users", :action => "index"
-  #get "/users/:id", :controller => "users", :action => "show"
+  get "/users/:id", :controller => "users", :action => "show"
 
   # UPDATE
   #get "/users/:id/edit", :controller => "users", :action => "edit"

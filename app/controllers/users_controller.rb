@@ -8,6 +8,10 @@ class UsersController < ApplicationController
 
   def show
 
+    @user = User.find(params[:id])
+    @photos = @user.photos
+
+    render("users/show.html.erb")
   end
 
 end
